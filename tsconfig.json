@@ -23,6 +23,7 @@
   },
   "include": [
     ".eslintrc.js",
+    "commitlint.config.js",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
