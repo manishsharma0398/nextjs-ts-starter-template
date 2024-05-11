@@ -8,7 +8,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: "module",
+    project: "./tsconfig.json",
   },
+  ignorePatterns: ["dist", ".eslintrc.js"],
   plugins: [
     "react",
     "react-hooks", // ai
