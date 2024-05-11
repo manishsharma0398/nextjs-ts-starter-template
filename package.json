@@ -11,7 +11,6 @@
     "lint": "eslint . --ext ts,tsx --color --report-unused-disable-directives --max-warnings 0",
     "prettify": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\" --write"
   },
-  "commit": "cz",
   "lint-staged": {
     "**/*.{js,ts,json}": "prettier --write",
     "**/*.{js,ts}": "eslint --fix"
