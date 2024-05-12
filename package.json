@@ -12,8 +12,8 @@
     "lint": "eslint . --ext ts,tsx --color --report-unused-disable-directives --max-warnings 0",
     "prettify": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\" --write",
     "test": "tsc && jest --coverage=false",
-    "test:coverage": "jest",
-    "test:watch": "jest --watch"
+    "test:ci": "tsc && jest",
+    "test:watch": "tsc && jest --watch"
   },
   "lint-staged": {
     "**/*.{js(x),ts(x)}": "eslint --cache --fix",
