@@ -11,17 +11,39 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
     "incremental": true,
-    "baseUrl": "src",
+    "baseUrl": "./",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@app/*": ["app/*"],
-      "@components/*": ["components/*"],
-      "@tests/*": ["tests/*"]
+      "@app": ["src/app"],
+      "@app/*": ["src/app/*"],
+      "@assets": ["src/assets"],
+      "@assets/*": ["src/assets/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@config": ["src/config"],
+      "@config/*": ["src/config/*"],
+      "@features": ["src/features"],
+      "@features/*": ["src/features/*"],
+      "@hooks": ["src/hooks"],
+      "@hooks/*": ["src/hooks/*"],
+      "@lib": ["src/lib"],
+      "@lib/*": ["src/lib/*"],
+      "@providers": ["src/providers"],
+      "@providers/*": ["src/providers/*"],
+      "@stores": ["src/stores"],
+      "@stores/*": ["src/stores/*"],
+      "@types": ["src/types"],
+      "@types/*": ["src/types/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"],
+      "@test": ["__tests__"],
+      "@test/*": ["__tests__/*"]
     }
   },
   "include": [
@@ -31,7 +53,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "__tests__/**/*.ts(x)",
+    ".next/types/**/*.ts",
+    "jest.config.cjs"
   ],
   "exclude": ["node_modules"]
 }

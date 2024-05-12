@@ -15,14 +15,13 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.js'],
   plugins: [
     'react',
-    'react-hooks', // ai
+    'react-hooks',
     'react-refresh',
     'testing-library',
     '@typescript-eslint',
     'import',
     'jsx-a11y',
     'promise',
-    'n', // ai
     'prettier',
   ],
   extends: [
@@ -33,14 +32,14 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:promise/recommended',
-    'plugin:n/recommended',
     'next/core-web-vitals',
     'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [
     {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      files: ['__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
     },
   ],
@@ -57,7 +56,7 @@ module.exports = {
   rules: {
     // turn on errors for missing imports
     'import/no-unresolved': 'error',
-    'n/exports-style': ['error', 'module.exports'],
+    'import/named': 'off',
     'prettier/prettier': [
       'error',
       {
