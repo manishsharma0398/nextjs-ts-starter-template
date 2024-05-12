@@ -16,8 +16,8 @@
     "test:watch": "jest --watch"
   },
   "lint-staged": {
-    "**/*.{js,ts,json}": "prettier --write",
-    "**/*.{js,ts}": "eslint --fix"
+    "**/*.{js(x),ts(x)}": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
   },
   "engines": {
     "node": ">=18.0.0"
