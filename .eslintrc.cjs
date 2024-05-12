@@ -76,5 +76,24 @@ module.exports = {
     ],
     //  avoid dev dependency error
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react/no-children-prop': 'off',
+    'import/prefer-default-export': 'off',
+    'react/react-in-jsx-scope': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'react/jsx-filename-extension': 0,
+    'react/jsx-props-no-spreading': 0,
+    'import/no-cycle': [2, { maxDepth: 1 }],
+    'no-restricted-exports': [0, { exports: ['default'] }],
+    'react/function-component-definition': [
+      2,
+      { namedComponents: 'arrow-function' },
+    ],
+    'react-hooks/rules-of-hooks': 'error', // Check's rules of Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Check's effect dependencies
+    'no-param-reassign': [
+      'error',
+      { props: true, ignorePropertyModificationsFor: ['draft'] },
+    ],
+    'react/jsx-key': ['error', { checkFragmentShorthand: true }],
   },
 };
