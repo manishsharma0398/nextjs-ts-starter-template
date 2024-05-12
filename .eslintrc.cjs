@@ -35,6 +35,8 @@ module.exports = {
     'next/core-web-vitals',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
     'plugin:prettier/recommended',
   ],
   overrides: [
