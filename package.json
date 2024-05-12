@@ -12,7 +12,7 @@
     "lint": "eslint . --ext ts,tsx --color --report-unused-disable-directives --max-warnings 0",
     "prettify": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\" --write",
     "test": "tsc && jest --coverage=false",
-    "test:ci": "tsc && jest",
+    "test:ci": "tsc && jest --coverage --silent --ci",
     "test:watch": "tsc && jest --watch"
   },
   "lint-staged": {
