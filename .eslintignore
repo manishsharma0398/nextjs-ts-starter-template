@@ -1,3 +1,4 @@
+**/.next/*
 .husky
 .nyc_output
 coverage

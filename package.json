@@ -11,7 +11,8 @@
     "prepare": "husky install",
     "lint": "eslint . --ext ts,tsx --color --report-unused-disable-directives --max-warnings 0",
     "prettify": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\" --write",
-    "test": "jest",
+    "test": "jest --coverage=false",
+    "test:coverage": "jest",
     "test:watch": "jest --watch"
   },
   "lint-staged": {
