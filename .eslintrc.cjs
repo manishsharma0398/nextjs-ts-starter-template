@@ -48,6 +48,11 @@ module.exports = {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   rules: {
     // turn on errors for missing imports
@@ -59,5 +64,18 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    //  avoid dev dependency error
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };

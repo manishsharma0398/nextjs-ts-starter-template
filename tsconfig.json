@@ -12,19 +12,22 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "src",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@app/*": ["app/*"],
+      "@components/*": ["components/*"],
+      "@tests/*": ["tests/*"]
     }
   },
   "include": [
-    ".eslintrc.js",
-    "commitlint.config.js",
-    "next.config.js",
+    ".eslintrc.cjs",
+    "commitlint.config.cjs",
+    "next.config.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
