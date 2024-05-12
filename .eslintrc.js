@@ -3,6 +3,8 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
+    node: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -15,6 +17,7 @@ module.exports = {
     'react',
     'react-hooks', // ai
     'react-refresh',
+    'testing-library',
     '@typescript-eslint',
     'import',
     'jsx-a11y',
@@ -32,17 +35,13 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:n/recommended',
     'next/core-web-vitals',
+    'plugin:testing-library/react',
     'plugin:prettier/recommended',
   ],
   overrides: [
     {
-      files: ['.eslintrc.{js,cjs}'],
-      env: {
-        node: true,
-      },
-      parserOptions: {
-        sourceType: 'script',
-      },
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
     },
   ],
   settings: {
